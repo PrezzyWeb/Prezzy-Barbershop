@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  body {
+    background-color: white;
+    color: black;
+  }
+  header, footer, nav, section {
+    padding: 1em;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-bottom: 1px solid #ccc;
+  }
+  nav {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    z-index: 10;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+  nav a img {
+    display: block;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+  }
+
+  button:hover {
+    background-color: rgb(65, 64, 64) ;
+    color: white;
+  }
+  .section {
+    padding: 2em 1em;
+    text-align: center;
+  }
+  .section h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+  .section p {
+    margin-bottom: 1.5em;
+  }
+  .services ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  .services li {
+    background: #f1f1f1;
+    padding: 1em;
+    border-radius: 10px;
+    width: 150px;
+  }
+  .about-section {
+    background: url('/img/signature.fade.png') no-repeat center center/cover;
+    color: white;
+    padding: 4em 1em;
+  }
+  .about-section .content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2em;
+    border-radius: 10px;
+  }
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    scroll-behavior: smooth;
+    animation: scroll-left 20s linear infinite;
+  }
+  .gallery img {
+    position: relative;
+    min-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .gallery .overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .booking form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+    margin: auto;
+  }
+  .booking input, .booking textarea, .booking button {
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .reviews {
+    background: #f9f9f9;
+    padding: 2em 1em;
+  }
+  .reviews h2 {
+    margin-bottom: 1em;
+  }
+  .review-item {
+    margin-bottom: 1.5em;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+  }
+  @media (max-width: 600px) {
+    .services ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
